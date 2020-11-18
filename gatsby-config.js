@@ -36,5 +36,18 @@ module.exports = {
         icon: "./src/assets/images/icon.png", // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+          },
+          {
+            family: `Roboto`,
+          },
+        ],
+      },
+    },
   ],
 }
