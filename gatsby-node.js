@@ -10,12 +10,9 @@ export const createPages = async ({ actions, graphql, reporter }) => {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/^((?!index).)*$/" } }
       ) {
-        edges {
-          node {
-            frontmatter {
-              slug
-              image
-            }
+        nodes {
+          frontmatter {
+            slug
           }
         }
       }
@@ -25,14 +22,13 @@ export const createPages = async ({ actions, graphql, reporter }) => {
   if (result.errors) {
     reporter.panicOnBuild("Error while running GraphQL query.")
   }
-
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  console.log(result.data.allMarkdownRemark.nodes)
+  result.data.allMarkdownRemark.nodes.forEach(({ frontmatter }) => {
     createPage({
-      path: `/products/${node.frontmatter.slug}`,
+      path: `/products/${frontmatter.slug}`,
       component,
       context: {
-        base: path.parse(node.frontmatter.image).base,
-        slug: node.frontmatter.slug,
+        slug: frontmatter.slug,
       },
     })
   })
