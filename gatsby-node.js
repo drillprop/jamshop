@@ -1,4 +1,4 @@
-exports.createPages = async ({ actions, graphql, reporter }) => {
+export const createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const component = require.resolve("./src/templates/ProductPage/index.js")

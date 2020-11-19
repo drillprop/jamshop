@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   siteMetadata: {
     title: "BEJAMAS | GATSBY SHOP",
     description: "",
