@@ -1,0 +1,36 @@
+.card-wrapper {
+  position: relative;
+  padding: 2rem;
+  width: 26rem;
+  height: 27rem;
+  border: 3px solid var(--gray3);
+  border-radius: 2px;
+  background-color: var(--card-bg);
+}
+
+.card-img {
+  // width: 100%;
+}
+
+.card-title {
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--gray0);
+  font-size: 1.8rem;
+}
+
+.card-excerpt {
+  color: var(--gray2);
+  font-size: 1.4rem;
+}
+
+.card-button {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 100%;
+  background-color: var(--buttons-bg-light);
+}
