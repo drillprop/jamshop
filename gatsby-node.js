@@ -37,3 +37,15 @@ export const createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 }
+
+export const onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage.startsWith("develop")) {
+    actions.setWebpackConfig({
+      resolve: {
+        alias: {
+          "react-dom": "@hot-loader/react-dom",
+        },
+      },
+    })
+  }
+}
