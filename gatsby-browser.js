@@ -1,6 +1,11 @@
 import React from "react"
+import CartContextProvider from "./src/contexts/CartContext"
 import Layout from "./src/layouts"
 
 export const wrapPageElement = ({ element }) => {
-  return <Layout>{element}</Layout>
+  return (
+    <CartContextProvider>
+      <Layout>{element}</Layout>
+    </CartContextProvider>
+  )
 }
