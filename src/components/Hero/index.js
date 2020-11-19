@@ -2,19 +2,21 @@ import React from "react"
 
 import HeroBackground from "../../assets/elements/hero_background.svg"
 import HeroImage from "../../assets/elements/monitor.svg"
-import HeroDecor from "../../assets/elements/hero_decor.svg"
+import styles from "./hero.module.scss"
+import CTAButton from "../CTAButton"
 
 function HomepageHero() {
   return (
-    <section>
+    <section className={styles.heroSection}>
       <img src={HeroImage} alt="Vector Monitor" />
-      <h1>
-        Don't waste time
-        <br />
-        on boring things
-      </h1>
-      <button>GO EXPLORE</button>
-      <img src={HeroBackground} />
+      <div className={styles.heroTitleWrapper}>
+        <h2 className={styles.heroTitle}>
+          <span>Don't waste time</span>
+          <span>on boring things</span>
+        </h2>
+        <CTAButton>GO EXPLORE</CTAButton>
+      </div>
+      <img className={styles.heroBackground} src={HeroBackground} />
     </section>
   )
 }
