@@ -1,3 +1,5 @@
+import path from "path"
+
 export const createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
@@ -12,6 +14,7 @@ export const createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               slug
+              image
             }
           }
         }
@@ -28,6 +31,7 @@ export const createPages = async ({ actions, graphql, reporter }) => {
       path: `/products/${node.frontmatter.slug}`,
       component,
       context: {
+        base: path.parse(node.frontmatter.image).base,
         slug: node.frontmatter.slug,
       },
     })
