@@ -47,7 +47,7 @@ export default {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Montserrat\:400,700`, `Roboto\:400,700`, `Georgia\:700`],
+        fonts: [`Montserrat\:400,700`, `Roboto\:300,400,700`, `Georgia\:700`],
       },
     },
   ],
