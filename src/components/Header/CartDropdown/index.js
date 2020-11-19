@@ -20,7 +20,7 @@ export default function CartDropdown() {
               <li className={styles.cartDropdownItem} key={item.slug + idx}>
                 <img
                   className={styles.cartDropdownImg}
-                  src={item.image}
+                  src={item.image.publicURL}
                   alt={item.name}
                 />
                 <p className={styles.cartDropdownName}>{item.name}</p>
