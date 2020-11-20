@@ -17,6 +17,10 @@
   }
 }
 
+.hero-image {
+  animation: image-animation 1s ease-in-out 0s 10 alternate;
+}
+
 .hero-title-wrapper {
   position: relative;
   button {
@@ -59,5 +63,14 @@
   z-index: -1;
   @media (max-width: 500px) {
     max-width: 300px;
+  }
+}
+
+@keyframes image-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(5px);
   }
 }

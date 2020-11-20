@@ -36,7 +36,19 @@ const spanVariants = {
 function HomepageHero() {
   return (
     <section className={styles.heroSection}>
-      <img src={HeroImage} alt="Vector Monitor" />
+      <motion.img
+        className={styles.heroImage}
+        initial={{
+          x: 80,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+        }}
+        src={HeroImage}
+        alt="Vector Monitor"
+      />
       <div className={styles.heroTitleWrapper}>
         <motion.h2
           initial="initial"
