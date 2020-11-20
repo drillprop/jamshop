@@ -11,25 +11,25 @@ export default function ShopCard({ product }) {
     addItemToCart(product)
   }
   return (
-    <article className={styles.cardWrapper}>
-      <img
-        className={styles.cardImg}
-        src={product.image.publicURL}
-        alt={product.name}
-      />
-      <Link to={`/products/${product.slug}`}>
+    <Link to={`/products/${product.slug}`}>
+      <article className={styles.cardWrapper}>
+        <img
+          className={styles.cardImg}
+          src={product.image.publicURL}
+          alt={product.name}
+        />
         <section>
           <h4 className={styles.cardTitle}>{product.name}</h4>
           <p className={styles.cardExcerpt}>{product.excerpt}</p>
         </section>
-      </Link>
-      <button
-        className={styles.cardButton}
-        title="add product"
-        onClick={handleAddToCart}
-      >
-        <img src={AddIcon} alt="cart icon" />
-      </button>
-    </article>
+        <button
+          className={styles.cardButton}
+          title="add product"
+          onClick={handleAddToCart}
+        >
+          <img src={AddIcon} alt="cart icon" />
+        </button>
+      </article>
+    </Link>
   )
 }
