@@ -2,7 +2,7 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  padding: 2rem 5rem 0;
+  padding: 2rem 7rem 0;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -14,6 +14,7 @@
 }
 
 .cart-button {
+  padding-right: 5rem;
   position: fixed;
   top: 2rem;
   right: 5rem;
@@ -32,9 +33,28 @@
   position: absolute;
   padding: 3px 5px;
   top: 4px;
-  right: 1px;
+  left: 3rem;
   font-size: 0.8rem;
   color: var(--white);
   border-radius: 50%;
   background-color: var(--buttons-bg-dark);
+}
+
+.cart-arrow {
+  --arrow-transform: translate(-50%, -50%) rotate(180deg);
+  --transition: transform 100ms ease-out, opacity 200ms ease-out;
+  position: absolute;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: var(--transition);
+  transform: var(--arrow-transform);
+  &.visible {
+    transform: var(--arrow-transform) translateX(-3rem);
+    opacity: 1;
+  }
+  &.open {
+    transform: var(--arrow-transform) translateX(-3rem) rotate(180deg);
+  }
 }

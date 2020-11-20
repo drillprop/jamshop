@@ -1,9 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
 import Carticon from "../../assets/icons/cart.svg"
+import ArrowSmall from "../../assets/icons/arrow-small.svg"
 import { useCartContext } from "../../contexts/CartContext"
 import CartDropdown from "./CartDropdown"
 import styles from "./Header.module.scss"
+import clsx from "clsx"
 
 export default function Header() {
   const { isCartOpen, toggleCart, cartItemsAmount } = useCartContext()
@@ -19,8 +21,19 @@ export default function Header() {
             title="open cart"
             onClick={toggleCart}
           >
-            <img className={styles.cartIcon} src={Carticon} alt="cart icon" />
-            <span className={styles.cartQuantity}>{cartItemsAmount}</span>
+            <div className={styles.cartIconWrapper}>
+              <span className={styles.cartQuantity}>{cartItemsAmount}</span>
+              <img className={styles.cartIcon} src={Carticon} alt="cart icon" />
+            </div>
+            <img
+              className={clsx(
+                styles.cartArrow,
+                cartItemsAmount && styles.visible,
+                isCartOpen && styles.open,
+              )}
+              src={ArrowSmall}
+              alt="cart icon"
+            />
           </button>
         </div>
       </header>
