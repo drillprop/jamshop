@@ -22,13 +22,14 @@ export const createPages = async ({ actions, graphql, reporter }) => {
   if (result.errors) {
     reporter.panicOnBuild("Error while running GraphQL query.")
   }
-  console.log(result.data.allMarkdownRemark.nodes)
+
   result.data.allMarkdownRemark.nodes.forEach(({ frontmatter }) => {
+    const slug = frontmatter.slug
     createPage({
-      path: `/products/${frontmatter.slug}`,
+      path: `/products/${slug}`,
       component,
       context: {
-        slug: frontmatter.slug,
+        slug,
       },
     })
   })
