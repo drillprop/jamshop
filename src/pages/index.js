@@ -1,5 +1,6 @@
 import React from "react"
 import Hero from "../components/Hero"
+import Shop from "../components/Shop"
 import SEO from "../components/SEO"
 
 export default function IndexPage() {
@@ -7,6 +8,7 @@ export default function IndexPage() {
     <>
       <SEO title="Home" />
       <Hero />
+      <Shop />
     </>
   )
 }
