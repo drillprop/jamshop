@@ -1,6 +1,4 @@
-import path from "path"
-
-export const createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const component = require.resolve("./src/templates/ProductPage/index.js")
@@ -35,7 +33,7 @@ export const createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
-export const onCreateWebpackConfig = ({ stage, actions }) => {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
   if (stage.startsWith("develop")) {
     actions.setWebpackConfig({
       resolve: {
