@@ -9,6 +9,9 @@
   background-color: var(--card-bg);
   display: flex;
   flex-direction: column;
+  &:hover {
+    background-color: var(--buttons-bg-dark);
+  }
 }
 
 .card-img {
@@ -42,7 +45,9 @@
   border-radius: 100%;
   background-color: var(--buttons-bg-light);
   transition: background-color 200ms ease-out;
-  &:hover {
-    background-color: #f43075;
+  &:hover,
+  &:focus {
+    background-color: #f1568c;
+    box-shadow: 0 0.5em 0.5em -0.2em #38085b;
   }
 }
