@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import React from "react"
 import { useCartContext } from "../../../contexts/CartContext"
@@ -13,7 +14,15 @@ export default function CartDropdown() {
   }
   return (
     <div className={styles.cartDropdownOverlay} onClick={handleCloseCart}>
-      <div className={styles.cartDropdownBox}>
+      <motion.div
+        initial={{ opacity: 0, x: 200 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          ease: [0.5, 0.04, -0.01, 0.9],
+        }}
+        exit={{ opacity: 0 }}
+        className={styles.cartDropdownBox}
+      >
         <ul className={styles.cartDropdownList}>
           {cartItems.map((item, idx) => (
             <li className={styles.cartDropdownItem} key={item.slug + idx}>
@@ -34,7 +43,7 @@ export default function CartDropdown() {
           ))}
         </ul>
         <button className={styles.cartDropdownButton}>submit</button>
-      </div>
+      </motion.div>
     </div>
   )
 }
