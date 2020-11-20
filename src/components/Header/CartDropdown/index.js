@@ -14,20 +14,17 @@ export default function CartDropdown() {
     <div className={styles.cartDropdownOverlay} onClick={handleCloseCart}>
       <div className={styles.cartDropdownBox}>
         <ul className={styles.cartDropdownList}>
-          {cartItems.map((item, idx) => {
-            console.log(item)
-            return (
-              <li className={styles.cartDropdownItem} key={item.slug + idx}>
-                <img
-                  className={styles.cartDropdownImg}
-                  src={item.image.publicURL}
-                  alt={item.name}
-                />
-                <p className={styles.cartDropdownName}>{item.name}</p>
-                <p className={styles.cartDropdownPrice}>${item.price}</p>
-              </li>
-            )
-          })}
+          {cartItems.map((item, idx) => (
+            <li className={styles.cartDropdownItem} key={item.slug + idx}>
+              <img
+                className={styles.cartDropdownImg}
+                src={item.image.publicURL}
+                alt={item.name}
+              />
+              <p className={styles.cartDropdownName}>{item.name}</p>
+              <p className={styles.cartDropdownPrice}>${item.price}</p>
+            </li>
+          ))}
         </ul>
         <button className={styles.cartDropdownButton}>submit</button>
       </div>
