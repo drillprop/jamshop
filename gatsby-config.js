@@ -45,6 +45,18 @@ export default {
       },
     },
     {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        contexts: `${__dirname}/src/contexts`,
+        components: `${__dirname}/src/components`,
+        pages: `${__dirname}/src/pages`,
+        styles: `${__dirname}/src/styles`,
+        assets: `${__dirname}/src/assets`,
+        layouts: `${__dirname}/src/layouts`,
+        templates: `${__dirname}/src/templates`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-webfonts",
       options: {
         fonts: {
