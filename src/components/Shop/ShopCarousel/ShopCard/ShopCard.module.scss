@@ -1,20 +1,24 @@
 .card-wrapper {
   position: relative;
+  margin: 0 auto;
   padding: 2rem;
-  width: 26rem;
+  max-width: 25.5rem;
   height: 27rem;
   border: 3px solid var(--gray3);
   border-radius: 2px;
   background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
 }
 
 .card-img {
-  // width: 100%;
+  display: block;
 }
 
 .card-title {
   text-transform: uppercase;
   margin: 0;
+  margin-top: 3rem;
   color: var(--gray0);
   font-size: 1.8rem;
 }
@@ -25,9 +29,13 @@
 }
 
 .card-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  bottom: 0.6rem;
-  right: 0.6rem;
+  bottom: 0.8rem;
+  right: 0.8rem;
   width: 4rem;
   height: 4rem;
   border: none;
