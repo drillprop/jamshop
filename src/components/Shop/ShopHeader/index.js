@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import styles from "./shop-header.module.scss"
+import styles from "./ShopHeader.module.scss"
 
 export default function ShopHeader() {
   const data = useStaticQuery(graphql`
