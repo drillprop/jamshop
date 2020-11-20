@@ -3,7 +3,7 @@ import styles from "./ShopArrow.module.scss"
 import ArrowBig from "../../../../assets/icons/arrow-big.svg"
 import clsx from "clsx"
 
-export default function ShopArrow(props) {
+export default function ShopArrow({ currentSlide, slideCount, ...props }) {
   const { className, direction = "right" } = props
   const directions = {
     right: 0,
