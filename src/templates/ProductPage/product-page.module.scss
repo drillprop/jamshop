@@ -1,5 +1,6 @@
 .product-section {
   display: grid;
+  overflow: hidden;
   align-items: center;
   gap: 0 6rem;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 40rem));
