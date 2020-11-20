@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./cta-button.module.scss"
+import styles from "./CTAButton.module.scss"
 
 export default function CTAButton({ children, ...props }) {
   return (
