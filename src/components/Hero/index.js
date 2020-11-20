@@ -2,7 +2,7 @@ import React from "react"
 
 import HeroBackground from "../../assets/elements/hero_background.svg"
 import HeroImage from "../../assets/elements/monitor.svg"
-import styles from "./hero.module.scss"
+import styles from "./Hero.module.scss"
 import CTAButton from "../CTAButton"
 
 function HomepageHero() {
