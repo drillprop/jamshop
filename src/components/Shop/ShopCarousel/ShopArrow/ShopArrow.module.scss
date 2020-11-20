@@ -1,0 +1,31 @@
+.arrow-button {
+  --arrow-distance: -8rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  width: 6.2rem;
+  height: 6.2rem;
+  border-radius: 100%;
+  display: flex;
+  transform: translateY(-50%);
+  top: 50%;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--buttons-bg-dark);
+  border: 3px solid var(--white);
+  img {
+    width: 17px;
+    height: 26px;
+  }
+  &.right {
+    right: var(--arrow-distance);
+  }
+  &.left {
+    left: var(--arrow-distance);
+  }
+  &[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
