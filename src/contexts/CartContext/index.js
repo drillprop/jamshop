@@ -5,8 +5,8 @@ const CartContext = createContext(null)
 export default function CartContextProvider({ children }) {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [cartItems, setItemsInCart] = useState([])
+
   const cartItemsAmount = cartItems.length
-  console.log(cartItemsAmount)
 
   const toggleCart = () => {
     if (!cartItemsAmount && !isCartOpen) return
