@@ -1,17 +1,28 @@
 .hero-section {
   display: grid;
-  width: 100%;
-  padding: 10rem 20rem;
+  margin-top: 10rem;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   align-items: center;
   grid-gap: 3rem;
   place-content: center;
+  @media (max-width: 1000px) {
+    justify-items: center;
+    text-align: center;
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 30rem;
+    img {
+      width: 250px;
+    }
+  }
 }
 
 .hero-title-wrapper {
   position: relative;
   button {
-    transform: translateX(-25%);
+    @media (min-width: 1000px) {
+      transform: translateX(-25%);
+    }
   }
 }
 
@@ -29,6 +40,12 @@
     top: -2rem;
     right: -1rem;
     content: url("../../assets/elements/hero_decor.svg");
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    font-size: 4rem;
   }
   span {
     display: block;
@@ -40,4 +57,7 @@
   top: 0;
   right: 0;
   z-index: -1;
+  @media (max-width: 500px) {
+    max-width: 300px;
+  }
 }
