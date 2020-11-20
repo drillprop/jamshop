@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./shop.module.scss"
+import styles from "./Shop.module.scss"
 import ShopCarousel from "./ShopCarousel"
 import ShopHeader from "./ShopHeader"
 
