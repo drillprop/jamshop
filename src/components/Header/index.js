@@ -1,9 +1,9 @@
-import React from "react"
 import { Link } from "gatsby"
-import styles from "./header.module.scss"
+import React from "react"
 import Carticon from "../../assets/icons/cart.svg"
 import { useCartContext } from "../../contexts/CartContext"
 import CartDropdown from "./CartDropdown"
+import styles from "./Header.module.scss"
 
 export default function Header() {
   const { isCartOpen, toggleCart, cartItemsAmount } = useCartContext()
