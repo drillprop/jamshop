@@ -26,8 +26,11 @@
     left: var(--arrow-distance);
   }
   &[disabled] {
-    opacity: 0.3;
     cursor: not-allowed;
+    border: 3px solid #604f6c;
+    img {
+      opacity: 0.3;
+    }
   }
   @media (max-width: 800px) {
     --arrow-distance: -2rem;
