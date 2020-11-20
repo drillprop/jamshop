@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import { useCartContext } from "../../../contexts/CartContext"
 import styles from "./CartDropdown.module.scss"
@@ -16,13 +17,19 @@ export default function CartDropdown() {
         <ul className={styles.cartDropdownList}>
           {cartItems.map((item, idx) => (
             <li className={styles.cartDropdownItem} key={item.slug + idx}>
-              <img
-                className={styles.cartDropdownImg}
-                src={item.image.publicURL}
-                alt={item.name}
-              />
-              <p className={styles.cartDropdownName}>{item.name}</p>
-              <p className={styles.cartDropdownPrice}>${item.price}</p>
+              <Link
+                className={styles.cartDropdownLink}
+                to={`/products/${item.slug}`}
+                onClick={toggleCart}
+              >
+                <img
+                  className={styles.cartDropdownImg}
+                  src={item.image.publicURL}
+                  alt={item.name}
+                />
+                <p className={styles.cartDropdownName}>{item.name}</p>
+                <p className={styles.cartDropdownPrice}>${item.price}</p>
+              </Link>
             </li>
           ))}
         </ul>
