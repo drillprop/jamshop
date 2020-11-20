@@ -6,6 +6,9 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
+  @media (max-width: 500px) {
+    right: 3rem;
+  }
 }
 
 .logo {
@@ -21,6 +24,9 @@
   cursor: pointer;
   background: none;
   border: none;
+  @media (max-width: 500px) {
+    right: 0;
+  }
 }
 
 .cart-icon {
