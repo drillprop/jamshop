@@ -6,4 +6,8 @@
   border-radius: 0.5rem;
   background-color: var(--buttons-bg-light);
   cursor: pointer;
+  transition: background-color 200ms ease-out;
+  &:hover {
+    background-color: #f43075;
+  }
 }
