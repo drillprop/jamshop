@@ -31,7 +31,14 @@ export default function Header() {
             onClick={toggleCart}
           >
             <div className={styles.cartIconWrapper}>
-              <span className={styles.cartQuantity}>{cartItemsAmount}</span>
+              <span
+                className={clsx(
+                  styles.cartQuantity,
+                  cartItemsAmount && styles.active,
+                )}
+              >
+                {cartItemsAmount}
+              </span>
               <img className={styles.cartIcon} src={Carticon} alt="cart icon" />
             </div>
             <img

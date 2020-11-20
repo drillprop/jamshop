@@ -38,6 +38,10 @@
   color: var(--white);
   border-radius: 50%;
   background-color: var(--buttons-bg-dark);
+  transition: background-color 200ms;
+  &.active {
+    background-color: var(--buttons-bg-light);
+  }
 }
 
 .cart-arrow {
