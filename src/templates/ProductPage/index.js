@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
 import { graphql } from "gatsby"
 import React from "react"
-import CTAButton from "../../components/CTAButton"
-import SEO from "../../components/SEO"
-import { useCartContext } from "../../contexts/CartContext"
+import CTAButton from "components/CTAButton"
+import SEO from "components/SEO"
+import { useCartContext } from "contexts/CartContext"
 import styles from "./product-page.module.scss"
 
 const articleVariants = {

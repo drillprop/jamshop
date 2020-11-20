@@ -1,7 +1,7 @@
 import React from "react"
-import AddIcon from "../../../../assets/icons/add.svg"
+import AddIcon from "assets/icons/add.svg"
 import styles from "./ShopCard.module.scss"
-import { useCartContext } from "../../../../contexts/CartContext"
+import { useCartContext } from "contexts/CartContext"
 import { Link } from "gatsby"
 
 export default function ShopCard({ product }) {

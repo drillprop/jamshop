@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import React from "react"
-import { useCartContext } from "../../../contexts/CartContext"
+import { useCartContext } from "contexts/CartContext"
 import styles from "./CartDropdown.module.scss"
 
 export default function CartDropdown() {

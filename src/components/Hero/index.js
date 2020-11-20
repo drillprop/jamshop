@@ -1,9 +1,9 @@
 import React from "react"
 
-import HeroBackground from "../../assets/elements/hero_background.svg"
-import HeroImage from "../../assets/elements/monitor.svg"
+import HeroBackground from "assets/elements/hero_background.svg"
+import HeroImage from "assets/elements/monitor.svg"
 import styles from "./Hero.module.scss"
-import CTAButton from "../CTAButton"
+import CTAButton from "components/CTAButton"
 import { motion } from "framer-motion"
 
 const h2variants = {
