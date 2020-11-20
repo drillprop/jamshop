@@ -40,12 +40,13 @@
   align-items: center;
   grid-template-columns: auto 1fr auto;
   gap: 1.5rem;
-  p:last-child {
-    justify-self: end;
-  }
   img {
     width: 2.8rem;
   }
+}
+.cart-dropdown-price {
+  justify-self: end;
+  align-self: start;
 }
 
 .cart-dropdown-button {
