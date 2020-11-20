@@ -1,6 +1,6 @@
 import React from "react"
 import { useCartContext } from "../../../contexts/CartContext"
-import styles from "./cart-dropdown.module.scss"
+import styles from "./CartDropdown.module.scss"
 
 export default function CartDropdown() {
   const { cartItems, toggleCart } = useCartContext()
