@@ -5,15 +5,14 @@ import clsx from "clsx"
 
 export default function ShopArrow(props) {
   const { className, direction = "right" } = props
-  console.log(props)
   const directions = {
     right: 0,
     left: 180,
   }
   return (
     <button
-      disabled={className.indexOf("disabled") >= 0}
       {...props}
+      disabled={className.indexOf("disabled") >= 0}
       className={clsx([styles.arrowButton, styles[direction]])}
     >
       <img

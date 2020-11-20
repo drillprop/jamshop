@@ -1,10 +1,11 @@
 .arrow-button {
   --arrow-distance: -8rem;
+  --arrow-size: 6.2rem;
   cursor: pointer;
   position: absolute;
   z-index: 10;
-  width: 6.2rem;
-  height: 6.2rem;
+  width: var(--arrow-size);
+  height: var(--arrow-size);
   border-radius: 100%;
   display: flex;
   transform: translateY(-50%);
@@ -27,5 +28,12 @@
   &[disabled] {
     opacity: 0.3;
     cursor: not-allowed;
+  }
+  @media (max-width: 800px) {
+    --arrow-distance: -2rem;
+    --arrow-size: 4rem;
+    img {
+      height: 13px;
+    }
   }
 }
