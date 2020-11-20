@@ -1,7 +1,12 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from "react"
+import CartContextProvider from "./src/contexts/CartContext"
+import Layout from "./src/layouts"
+import "what-input"
 
-// You can delete this file if you're not using it
+export const wrapPageElement = ({ element }) => {
+  return (
+    <CartContextProvider>
+      <Layout>{element}</Layout>
+    </CartContextProvider>
+  )
+}

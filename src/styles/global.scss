@@ -6,6 +6,10 @@ html {
   overflow-y: scroll;
 }
 
+[data-whatinput="mouse"] *:focus {
+  outline: none;
+}
+
 body,
 button {
   font-family: var(--montserrat);
