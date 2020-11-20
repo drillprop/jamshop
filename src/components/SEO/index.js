@@ -15,7 +15,7 @@ export default function SEO({ description, lang, meta, title }) {
           }
         }
       }
-    `
+    `,
   )
 
   const metaDescription = description || site.siteMetadata.description
